@@ -16,8 +16,8 @@ Endpoint generati dal router:
     /api/send-logs/                      – SendLogViewSet (sola lettura)
 
 Endpoint aggiuntivi (APIView custom):
-    /api/trigger-newsletter/             – TriggerNewsletterView (POST)
-    /api/todays-celebrants/              – TodaysCelebrantsView (GET)
+    /api/newsletter/trigger/             – TriggerNewsletterView (POST)
+    /api/newsletter/celebrants-today/    – TodaysCelebrantsView (GET)
 """
 
 from django.urls import include, path
@@ -33,25 +33,36 @@ from .views import (
     TriggerNewsletterView,
 )
 
+# Namespace dell'app: consente di referenziare le URL con il prefisso "newsletter:".
+app_name = "newsletter"
+
 # Crea il router DRF che genera automaticamente le URL per i ViewSet.
 router = DefaultRouter()
 
-# Registrazione dei ViewSet con i relativi prefissi URL.
+# Registra le sedi aziendali: genera gli endpoint CRUD per il modello Office.
 router.register(r"offices", OfficeViewSet, basename="office")
+
+# Registra i team: genera gli endpoint CRUD per il modello Team.
 router.register(r"teams", TeamViewSet, basename="team")
+
+# Registra i dipendenti: genera gli endpoint CRUD per il modello Employee.
 router.register(r"employees", EmployeeViewSet, basename="employee")
+
+# Registra i template email: genera gli endpoint CRUD per il modello EmailTemplate.
 router.register(r"templates", EmailTemplateViewSet, basename="emailtemplate")
+
+# Registra i log di invio: genera gli endpoint in sola lettura per il modello SendLog.
 router.register(r"send-logs", SendLogViewSet, basename="sendlog")
 
 urlpatterns = [
     # URL generate automaticamente dal router per tutti i ViewSet registrati.
     path("", include(router.urls)),
 
-    # Endpoint custom per il trigger manuale dell'invio newsletter.
+    # Endpoint per il trigger manuale dell'invio newsletter (POST).
     # Accoda un task asincrono tramite il Django Task Framework.
-    path("trigger-newsletter/", TriggerNewsletterView.as_view(), name="trigger-newsletter"),
+    path("newsletter/trigger/", TriggerNewsletterView.as_view(), name="trigger"),
 
-    # Endpoint custom in sola lettura per consultare i festeggiati di oggi.
+    # Endpoint in sola lettura per consultare i festeggiati di oggi (GET).
     # Supporta il parametro opzionale ?date=YYYY-MM-DD nella query string.
-    path("todays-celebrants/", TodaysCelebrantsView.as_view(), name="todays-celebrants"),
+    path("newsletter/celebrants-today/", TodaysCelebrantsView.as_view(), name="celebrants-today"),
 ]

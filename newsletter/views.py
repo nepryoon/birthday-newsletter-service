@@ -328,7 +328,7 @@ class TriggerNewsletterView(APIView):
     da usare. Se omessi, vengono usati i valori predefiniti (oggi e template default).
 
     Endpoint:
-        POST /api/trigger-newsletter/
+        POST /api/newsletter/trigger/
 
     Request body (tutti i campi opzionali):
         {
@@ -417,8 +417,8 @@ class TodaysCelebrantsView(APIView):
     nella query string per specificare una data diversa da oggi.
 
     Endpoint:
-        GET /api/todays-celebrants/
-        GET /api/todays-celebrants/?date=YYYY-MM-DD
+        GET /api/newsletter/celebrants-today/
+        GET /api/newsletter/celebrants-today/?date=YYYY-MM-DD
 
     Responses:
         200 OK – lista dei festeggiati con conteggio
