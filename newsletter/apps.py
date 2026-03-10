@@ -16,4 +16,4 @@ class NewsletterConfig(AppConfig):
     name = "newsletter"
 
     # Nome leggibile dell'app (usato nell'interfaccia di amministrazione)
-    verbose_name = "Newsletter Compleanni"
+    verbose_name = "Servizio Newsletter Compleanni"
