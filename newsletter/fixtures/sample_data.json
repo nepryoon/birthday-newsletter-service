@@ -1,0 +1,295 @@
+[
+  {
+    "model": "newsletter.office",
+    "pk": 1,
+    "fields": {
+      "name": "Roma",
+      "timezone": "Europe/Rome",
+      "created_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.office",
+    "pk": 2,
+    "fields": {
+      "name": "Milano",
+      "timezone": "Europe/Rome",
+      "created_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.office",
+    "pk": 3,
+    "fields": {
+      "name": "Londra",
+      "timezone": "Europe/London",
+      "created_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.team",
+    "pk": 1,
+    "fields": {
+      "office": 1,
+      "name": "Backend"
+    }
+  },
+  {
+    "model": "newsletter.team",
+    "pk": 2,
+    "fields": {
+      "office": 1,
+      "name": "Frontend"
+    }
+  },
+  {
+    "model": "newsletter.team",
+    "pk": 3,
+    "fields": {
+      "office": 2,
+      "name": "Data Science"
+    }
+  },
+  {
+    "model": "newsletter.team",
+    "pk": 4,
+    "fields": {
+      "office": 3,
+      "name": "DevOps"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 1,
+    "fields": {
+      "first_name": "Marco",
+      "last_name": "Rossi",
+      "email": "marco.rossi@azienda.com",
+      "birth_date": "1990-03-10",
+      "team": 1,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 2,
+    "fields": {
+      "first_name": "Laura",
+      "last_name": "Bianchi",
+      "email": "laura.bianchi@azienda.com",
+      "birth_date": "1985-03-10",
+      "team": 1,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 3,
+    "fields": {
+      "first_name": "Giovanni",
+      "last_name": "Ferrari",
+      "email": "giovanni.ferrari@azienda.com",
+      "birth_date": "1988-05-15",
+      "team": 1,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 4,
+    "fields": {
+      "first_name": "Sofia",
+      "last_name": "Esposito",
+      "email": "sofia.esposito@azienda.com",
+      "birth_date": "1992-07-22",
+      "team": 1,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 5,
+    "fields": {
+      "first_name": "Alessandro",
+      "last_name": "Romano",
+      "email": "alessandro.romano@azienda.com",
+      "birth_date": "1987-11-08",
+      "team": 2,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 6,
+    "fields": {
+      "first_name": "Chiara",
+      "last_name": "Colombo",
+      "email": "chiara.colombo@azienda.com",
+      "birth_date": "1993-02-14",
+      "team": 2,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 7,
+    "fields": {
+      "first_name": "Luca",
+      "last_name": "Ricci",
+      "email": "luca.ricci@azienda.com",
+      "birth_date": "1991-09-30",
+      "team": 2,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 8,
+    "fields": {
+      "first_name": "Martina",
+      "last_name": "Marino",
+      "email": "martina.marino@azienda.com",
+      "birth_date": "1989-04-18",
+      "team": 2,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 9,
+    "fields": {
+      "first_name": "Andrea",
+      "last_name": "Greco",
+      "email": "andrea.greco@azienda.com",
+      "birth_date": "1986-12-03",
+      "team": 3,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 10,
+    "fields": {
+      "first_name": "Valentina",
+      "last_name": "Bruno",
+      "email": "valentina.bruno@azienda.com",
+      "birth_date": "1994-06-25",
+      "team": 3,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 11,
+    "fields": {
+      "first_name": "James",
+      "last_name": "Smith",
+      "email": "james.smith@azienda.com",
+      "birth_date": "1988-08-12",
+      "team": 3,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 12,
+    "fields": {
+      "first_name": "Emma",
+      "last_name": "Johnson",
+      "email": "emma.johnson@azienda.com",
+      "birth_date": "1990-01-29",
+      "team": 3,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 13,
+    "fields": {
+      "first_name": "Carlos",
+      "last_name": "Garcia",
+      "email": "carlos.garcia@azienda.com",
+      "birth_date": "1985-10-07",
+      "team": 4,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 14,
+    "fields": {
+      "first_name": "Yuki",
+      "last_name": "Tanaka",
+      "email": "yuki.tanaka@azienda.com",
+      "birth_date": "1992-03-20",
+      "team": 4,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.employee",
+    "pk": 15,
+    "fields": {
+      "first_name": "Mohammed",
+      "last_name": "Al-Rashid",
+      "email": "mohammed.alrashid@azienda.com",
+      "birth_date": "1987-07-16",
+      "team": 4,
+      "is_active": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.emailtemplate",
+    "pk": 1,
+    "fields": {
+      "name": "Template Compleanno Standard",
+      "subject": "\ud83c\udf82 Compleanni del {date} - Team {team_name}",
+      "body": "Ciao {recipient_name},\n\nOggi festeggiamo i seguenti colleghi:\n\n{celebrants_list}\n\nUnisciti a noi nel fare gli auguri!\n\nIl Team HR",
+      "is_default": true,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "newsletter.emailtemplate",
+    "pk": 2,
+    "fields": {
+      "name": "Template Compleanno Alternativo",
+      "subject": "\ud83c\udf89 Auguri di compleanno da {office_name}!",
+      "body": "Buongiorno {recipient_name},\n\nAbbiamo il piacere di informarti che oggi, {date}, i tuoi colleghi festeggiano il loro compleanno:\n\n{celebrants_list}\n\nFacciamo tutti insieme i nostri migliori auguri!\n\nHR Department",
+      "is_default": false,
+      "created_at": "2024-01-15T09:00:00Z",
+      "updated_at": "2024-01-15T09:00:00Z"
+    }
+  }
+]
